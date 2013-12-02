@@ -147,7 +147,7 @@ aCSS(".game_tabs_item .game_tabs_link","background-color:#E8E8E8");
 Sty(".pod_header",o1);
 /* Need "background" to replace bg-image*/
 /*Sty(".game_comments .game_comment_form_lower, .game_discussions .game_discussions_links",{"background":"#111","color":"#ccc"});*/
-Sty(".game_comment_form_lower,.game_discussions_links",{"background":"#111","color":"#ccc"});*/
+Sty(".game_comment_form_lower,.game_discussions_links",{"background":"#111","color":"#ccc"});
 Sty(".tag a",o0);
 
 /* Forum Posts */
