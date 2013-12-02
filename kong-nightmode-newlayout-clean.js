@@ -54,6 +54,7 @@ sT = "color:#ccc"; /* TEXT ONLY */
 
 /* Main backgrounds */
 Sty("#primarywrap", o0);
+Sty("#primarywrap", {"backgroundImage":"none"});
 Sty("#secondary_wrap", o1);
 Sty("#subwrap,#footer,#footer a", o0);
 
@@ -137,11 +138,14 @@ Sty(".game_tab_content",o1);
 Sty(".game_comments .comments_type",o0);
 Sty(".game_comments .comment .sender_name_link",o1);
 
-Sty(".game_tabs_list",o0);
+Sty(".game_tab_group",o0); /* BG for most of the boxes below the game; 2013-12-02 */
+/* Sty(".game_tab_link",o1); /* bad - don't do this */
+
 aCSS(".game_tabs_item .game_tabs_link","background-color:#E8E8E8");
 /* FAIL */
 /* Sty(".game_tabs_item.active .game_tabs_link",o0); */
 /* FAIL */
+
 
 /*Sty(".game_more_games .pod_header",o1);*/
 Sty(".pod_header",o1);
