@@ -140,8 +140,9 @@ Sty(".game_comments .comment .sender_name_link",o1);
 
 Sty(".game_tab_group",o0); /* BG for most of the boxes below the game; 2013-12-02 */
 /* Sty(".game_tab_link",o1); /* bad - don't do this */
+Sty(".game_tab_index",o1); /* Tab row*/
 
-aCSS(".game_tabs_item .game_tabs_link","background-color:#E8E8E8");
+aCSS(".game_tab_item .game_tab_link","background-color:#E8E8E8"); /* This doesn't seem to work anymore */
 /* FAIL */
 /* Sty(".game_tabs_item.active .game_tabs_link",o0); */
 /* FAIL */
