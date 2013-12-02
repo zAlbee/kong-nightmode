@@ -44,6 +44,7 @@ function aCSS(r,def) {
 
 o0 = {"backgroundColor":"#000","color":"#ccc"}; /* BLACK */
 o1 = {"backgroundColor":"#111","color":"#ccc"}; /* DARKEST GRAY*/
+oimg = {"backgroundImage":"none"};
 /* oT = {"color":"#ccc"}; /* TEXT ONLY */
 
 s0 = "background-color:#000;color:#ccc"; /* BLACK */
@@ -54,9 +55,18 @@ sT = "color:#ccc"; /* TEXT ONLY */
 
 /* Main backgrounds */
 Sty("#primarywrap", o0);
-Sty("#primarywrap", {"backgroundImage":"none"});
+Sty("#primarywrap", oimg);
 Sty("#secondary_wrap", o1);
 Sty("#subwrap,#footer,#footer a", o0);
+
+/* Category links at the top (Top New, Favorites, Shooter, ...) */
+/*
+ * This is the annoying gradient at the top of each page
+ * #play .gamepage_header_outer {background-image: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%,rgba(255,255,255,0) 100%)}
+ */
+Sty("#play .gamepage_header_outer", oimg);
+/* aCSS("#play .gamepage_header_outer","background-image:none"); */
+aCSS(".gamepage_category a",s0)
 
 /* Border around game and chat  - use bg-COLOR to preserve images */
 Sty("#maingame,#quicklinks li,#kong_game_ui ul.main_tabs", o1);
