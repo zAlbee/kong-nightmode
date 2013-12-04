@@ -56,7 +56,6 @@ sT = "color:#ccc"; /* TEXT ONLY */
 /* Main backgrounds */
 Sty("#primarywrap", o0);
 Sty("#primarywrap", oimg);
-Sty("#secondary_wrap", o1);
 Sty("#subwrap,#footer,#footer a", o0);
 
 /* Category links at the top (Top New, Favorites, Shooter, ...) */
@@ -188,26 +187,8 @@ Sty(".comment_reply",o0);
 /*Sty(".highcontrast",{'backgroundColor':'#cc9'});*/
 
 
-/************ OLD LAYOUT **************/
-
-/* boxes below game */
-Sty(".cntrMidlight",{"backgroundColor":"#000","borderColor":"#333"});
-Sty("#gameinfo .game_details",o0);
-
-/* Forum/Comments tab*/
-aCSS("#game_discussion_tabs li a.active",s0)
-/* Comments */
-Sty("#comments_list",o0);
-Sty(".comment",o1);
-/* BOTD +15 bonus points - not overrideable ATM
-  .highcontrast - #000!important */
-
-/* Forum posts */
-Sty("#game_discussion .discussion_tab_pane",o0)
-Sty("#game_discussion .game_forum_post",o1)
-Sty("#game_discussion .game_forum_post p a",o1) /* use text-only*/
 
 /************ FORUMS *************/
-
-
-Sty(".posts .post .body blockquote, .posts .post .body pre",{"background":"#222","borderColor":"#333"})
+/* 
+ * Sty(".posts .post .body blockquote, .posts .post .body pre",{"background":"#222","borderColor":"#333"})
+ */
