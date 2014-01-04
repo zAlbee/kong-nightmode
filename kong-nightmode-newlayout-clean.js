@@ -114,7 +114,11 @@ aCSS("#kong_game_ui .tabpane .contents_inner",s1);
 aCSS(".cntrNotify",s0);
 /* AWARD TAB - BOTD notification (.regtxt) */
 aCSS(".regtext",s1);
-aCSS("#kong_game_ui .accomplishment_completed .check_tomorrow",s0)
+aCSS("#kong_game_ui .accomplishment_completed .check_tomorrow",s0);
+
+/* TODO: Do the above still apply? */
+/* AWARD tab - NEW 2013 - has a two-tone gray/white background with image. Make the text dark to be readable */
+aCSS("#accomplishment_awarded_tab_pane_content","color:#000");
 
 /* Chat Select Dropdown */
 aCSS("#kong_game_ui .chat_actions_container select",s1);
@@ -163,6 +167,9 @@ Sty(".pod_header",o1);
 /*Sty(".game_comments .game_comment_form_lower, .game_discussions .game_discussions_links",{"background":"#111","color":"#ccc"});*/
 Sty(".game_comment_form_lower,.game_discussions_links",{"background":"#111","color":"#ccc"});
 Sty(".tag a",o0);
+
+/* The published date and # of gameplays is black text with !important marking... need to override it similarly */
+aCSS(".highcontrast", "color:white!important")
 
 /* Forum Posts */
 Sty(".post_tagline,.post_author",o0);
