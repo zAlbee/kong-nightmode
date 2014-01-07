@@ -49,6 +49,7 @@ oimg = {"backgroundImage":"none"};
 
 s0 = "background-color:#000;color:#ccc"; /* BLACK */
 s1 = "background:#111;color:#ccc;"; /* DARKEST GRAY */
+
 s2 = s1 + ";border-color:#333"; /* DARKEST GRAY + OUTLINE */
 s3 = "background-color:#113;color:#ccc"; /* DARK BLUE */
 sT = "color:#ccc"; /* TEXT ONLY */
@@ -119,7 +120,21 @@ aCSS("#kong_game_ui .accomplishment_completed .check_tomorrow",s0);
 
 /* TODO: Do the above still apply? */
 /* AWARD tab - NEW 2013 - has a two-tone gray/white background with image. Make the text dark to be readable */
-aCSS("#accomplishment_awarded_tab_pane_content","color:#000");
+aCSS("#accomplishment_awarded_tab_pane_content,#high_score_alert_tab_pane_content","color:#000");
+/* AWARD tab - set a high score 
+	<div id="high_score_alert_tab_pane" class="holodeck_award_outer tabpane" style="height: 486px; background-color: rgb(0, 0, 0); color: rgb(204, 204, 204);">
+	<div id="high_score_alert_tab_pane_content">
+	  <div class="hololevel_outer award_banner ptl">
+	<div class="award_feature">
+	<h4 class="award_title high_award_title pbm">Congratulations&nbsp;<span id="high_score_alert_username">zAlbee</span>!</h4>
+	<p class="regtextLrg high_score_intro mbm"><strong>You set a high score in</strong> Hell Tetris</p>
+	<div class="regtext high_score_summary"><p class="high_score_number holodeck_kongbot_happy"><strong>1</strong> Score</p><a href="#">view leaderboard »</a></div>
+	</div>
+	</div>
+	
+	</div>
+	</div>
+*/
 
 /* Chat Select Dropdown */
 aCSS("#kong_game_ui .chat_actions_container select",s1);
@@ -192,7 +207,7 @@ aCSS(".highcontrast", "color:white!important")
 	}
 */
 s1imp = "background:#111!important;";
-aCSS(".game_hover:hover, .game_hover.game_hover_active",s1imp)
+aCSS(".game_hover:hover,.game_hover.game_hover_active",s1imp)
 
 /* High Scores in new layout (bottom) 
 	.your_best_score - rgb(235, 245, 255)
@@ -202,6 +217,15 @@ aCSS(".game_hover:hover, .game_hover.game_hover_active",s1imp)
 */
 aCSS(".score_table .score","color:#000"); /* For now, keep light bg, dark text (easier) */
 aCSS(".your_best_score",s1)
+/* The corner-shaped tabs for the boxes */
+/**  
+.tab_link.active:before, .game_tab_item.active .game_tab_link:before {
+	border-color: transparent transparent #fafafa #fafafa;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: rgb(250, 250, 250);
+	border-left-color: rgb(250, 250, 250);
+*/
 
 /* Forum Posts */
 Sty(".post_tagline,.post_author",o0);
