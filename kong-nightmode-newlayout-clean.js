@@ -166,10 +166,32 @@ Sty(".pod_header",o1);
 /* Need "background" to replace bg-image*/
 /*Sty(".game_comments .game_comment_form_lower, .game_discussions .game_discussions_links",{"background":"#111","color":"#ccc"});*/
 Sty(".game_comment_form_lower,.game_discussions_links",{"background":"#111","color":"#ccc"});
-Sty(".tag a",o0);
+
+/* The game's tags 
+ * <li class="tag"><a href="/mouse-games" class="term" rel="tag" style="background-color: rgb(17, 17, 17); color: rgb(204, 204, 204);">Mouse</a></li>
+ */
+Sty(".term",o1);
+/* Recommended Games' tags: 
+ * <li class="tag"><span class="term">Idle</span></li>
+ * normal
+	  .tags .tag .term, .tags .tag .term:link, .tags .tag .term:visited
+  on hover:
+	  .game_hover:hover .tags .tag .term, .game_hover.game_hover_active .tags .tag .term 
+ */
 
 /* The published date and # of gameplays is black text with !important marking... need to override it similarly */
 aCSS(".highcontrast", "color:white!important")
+
+/* Recommended Games & Other Games by this Developer
+ *  It's bright pale yellow due to:
+	.game_hover:hover, .game_hover.game_hover_active {
+		background-color: #fffae2 !important;
+		border: solid 1px #ebe7da !important;
+		padding: 4px;
+	}
+*/
+s1imp = "background:#111!important;";
+aCSS(".game_hover:hover, .game_hover.game_hover_active",s1imp)
 
 /* Forum Posts */
 Sty(".post_tagline,.post_author",o0);
