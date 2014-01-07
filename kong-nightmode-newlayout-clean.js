@@ -194,6 +194,15 @@ aCSS(".highcontrast", "color:white!important")
 s1imp = "background:#111!important;";
 aCSS(".game_hover:hover, .game_hover.game_hover_active",s1imp)
 
+/* High Scores in new layout (bottom) 
+	.your_best_score - rgb(235, 245, 255)
+	.microtabs .tab_box - rgb(238, 238, 238) // border
+	.score_table .score.even - rgb(238, 238, 238)
+	.score_table .score - rgb(255, 255, 255)
+*/
+aCSS(".score_table .score","color:#000"); /* For now, keep light bg, dark text (easier) */
+aCSS(".your_best_score",s1)
+
 /* Forum Posts */
 Sty(".post_tagline,.post_author",o0);
 Sty(".post_message a",o1);
