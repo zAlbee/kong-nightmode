@@ -108,7 +108,8 @@ aCSS("#kong_game_ui .game_accomplishment .accomplishment_header .part_of_quest",
 
 /* USER INFO tab */
 aCSS("#kong_game_ui .tabpane .contents_inner",s1);
-
+/*   Member since / Location */
+aCSS("#user_mini_profile_contents #user_info ul",s1)
 
 /* AWARD TAB - Next Achievement suggestion (cntrNotify) */
 aCSS(".cntrNotify",s0);
