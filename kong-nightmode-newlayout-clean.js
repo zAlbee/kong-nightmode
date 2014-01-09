@@ -25,7 +25,10 @@ function aCSS(r,def) {
 	var sss=document.styleSheets;
 	if (sss){
 		for (var i=0;i<sss.length;i++){
-			if (sss[i].cssRules || sss[i].rules) {
+			/* Firefox will throw a SecurityError exception when accessing cssRules or 
+			 * calling insertRule for a styleSheet from another domain! Check href==null 
+			 * to avoid this. */
+			if (sss[i].href == null && (sss[i].cssRules || sss[i].rules)) {
 				if (sss[i].addRule){ /* IE + cHrome */
 					/* For IE9, add it to the LAST stylesheet 
 					 * For Google Chrome, add it to the FIRST stylesheet 
