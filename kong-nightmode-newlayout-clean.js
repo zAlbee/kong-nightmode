@@ -78,6 +78,8 @@ aCSS("#kong_game_ui ul.main_tabs li.tab a.active",s0);
 
 /* CHAT tab */
 Sty("#chat_container,.tabpane", o0);
+  /* "Connecting to chat..." (when disconnected) */
+aCSS("#kong_game_ui .default_tab_pane_content",s1)
 
 /* Room name (not tab) */
 Sty(".room_name",{"color":"#eee"});
