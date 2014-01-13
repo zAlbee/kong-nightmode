@@ -18,27 +18,43 @@ function Sty(sel,obj){
 }
 
 /**
- * Changes the CSS rule.
- * Does not work in Firefox (SecurityError)
+ * Inserts/replaces the CSS rule.
+ * @param r - CSS rule selector as string
+ * @param def - CSS definition as string, not including curly braces
  */ 
 function aCSS(r,def) {
 	var sss=document.styleSheets;
 	if (sss){
-		for (var i=0;i<sss.length;i++){
+		for (var i = sss.length - 1; i >= 0; i--){
 			/* Firefox will throw a SecurityError exception when accessing cssRules or 
 			 * calling insertRule for a styleSheet from another domain! Check href==null 
-			 * to avoid this. */
-			if (sss[i].href == null && (sss[i].cssRules || sss[i].rules)) {
-				if (sss[i].addRule){ /* IE + cHrome */
-					/* For IE9, add it to the LAST stylesheet 
-					 * For Google Chrome, add it to the FIRST stylesheet 
-					 * TODO: Optimize this.
-					 */
-					sss[i].addRule(r,def,0);
-				}
-				else if (sss[i].insertRule){ /* FF + Chrome + IE 9 */ 
-					sss[i].insertRule(r+'{'+def+'}', 0);
-					break;
+			 * to avoid this. 
+			 * If more than one CSS rule matches with same specificity, the last one wins. 
+			 * So use the last stylesheet that is valid, and add to the end of the rules.
+			 */
+			if (sss[i].href == null) {
+				var rules = (sss[i].cssRules || sss[i].rules); 
+				if (rules) {
+					for (var j=rules.length - 1; j>=0; j--) {
+						var rule = rules[j];
+						if (rule.selectorText == r) {
+							/* alert("at rule " + j + " sheet " + i + " deleting '" + rule.selectorText + "'"); */
+							/* Technically it's not even necessary to delete the old rule, since it'll get superceded by the later one,
+							 * but this helps avoid memory leaks at the expense of a bit more CPU.
+							 */
+							sss[i].deleteRule(j);
+							break;
+						}
+					}
+					var pos = rules.length;
+					if (sss[i].addRule){ /* IE + cHrome */
+						sss[i].addRule(r,def,pos);
+						break;
+					}
+					else if (sss[i].insertRule){ /* FF + Chrome + IE 9 */ 
+						sss[i].insertRule(r+'{'+def+'}',pos);
+						break;
+					}
 				}
 			}
 		}
