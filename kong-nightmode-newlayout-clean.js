@@ -131,7 +131,9 @@ aCSS("#kong_game_ui .game_accomplishment .accomplishment_header .part_of_quest",
 /* USER INFO tab */
 aCSS("#kong_game_ui .tabpane .contents_inner",s1);
 /*   Member since / Location */
-aCSS("#user_mini_profile_contents #user_info ul",s1)
+aCSS("#user_mini_profile_contents #user_info ul",s1);
+/*   Room Moderator in ... */
+aCSS(".room_info_users .room_info_user_list",s0);
 
 /* AWARD TAB - Next Achievement suggestion (cntrNotify) */
 aCSS(".cntrNotify",s0);
