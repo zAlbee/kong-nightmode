@@ -71,6 +71,7 @@ s1 = "background:#111;color:#ccc;"; /* DARKEST GRAY */
 
 s2 = s1 + ";border-color:#333"; /* DARKEST GRAY + OUTLINE */
 s3 = "background-color:#113;color:#ccc"; /* DARK BLUE */
+s4 = "background-color:#131;color:#ccc"; /* DARK GREEN */
 sT = "color:#ccc"; /* TEXT ONLY */
 
 /* Main backgrounds */
@@ -108,10 +109,17 @@ aCSS("#kong_game_ui .chat_room_tab a",s0);
 Sty(".chat_message_window,.users_in_room",o1);
 aCSS("#kong_game_ui .user_row .username","color:#ccc");
 /* chat messages */
-aCSS("#kong_game_ui .chat_message_window .whisper", s3); /* dark blue*/
 aCSS("#kong_game_ui .chat_message_window .even", s0);
+aCSS("#kong_game_ui .chat_message_window .whisper", s3); /* dark blue*/
 aCSS("#kong_game_ui .chat_message_window .error_msg", "background-color:#311"); /* dark red */
 Sty(".chat_input",o1);
+
+/* 
+ * For Chat Line Highlighting http://userscripts.org/scripts/review/49868 
+ * also works with Kongregate One http://userscripts.org/scripts/review/164732
+ */
+aCSS("#kong_game_ui .chat_message_window .highlight", s4); 
+aCSS("#kong_game_ui .chat_message_window .highlight.even", s4); 
 
 /* GAME INFO tab */
 aCSS(".cntrToggle",s1);
